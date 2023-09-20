@@ -1,0 +1,141 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__page {
+  padding: 73px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__title {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile__form {
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  padding: 125px 0 204px 0;
+}
+
+.profile__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile__label {
+  color: #fff;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile__input {
+  border: none;
+  padding: 0;
+  background: #202020;
+  width: 100%;
+  color: #fff;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: 0;
+  text-align: right;
+}
+
+.profile__error {
+  min-height: 17px;
+  color: #ff004c;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.profile__line {
+  border-bottom: 1px solid #424242;
+  width: 100%;
+  margin: 0 0 17px 0;
+}
+
+.profile__button {
+  padding: 0;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #202020;
+  transition: opacity 0.3s linear;
+}
+
+.profile__button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.profile__logout {
+  text-decoration: none;
+  color: #ee3465;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 15px 0 70px 0;
+  transition: opacity 0.3s linear;
+}
+
+.profile__logout:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+  .profile__page {
+    padding: 236px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile__form {
+    width: 410px;
+    display: flex;
+    flex-direction: column;
+    padding: 97px 0 195px 0;
+  }
+  .profile__logout {
+    padding: 15px 0 269px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile__page {
+    padding: 70px 0 0 0;
+  }
+  .profile__form {
+    width: 260px;
+    padding: 81px 0 363px 0;
+  }
+  .profile__button {
+    font-size: 12px;
+  }
+  .profile__logout {
+    font-size: 12px;
+    padding: 15px 0 40px 0;
+  }
+}

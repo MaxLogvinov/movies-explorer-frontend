@@ -1,0 +1,118 @@
+.techs {
+  background: #272727;
+  padding: 100px 70px 53px 70px;
+}
+
+.techs__title {
+  margin: 0;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  border-bottom: solid 1px #dadada;
+  min-height: 50px;
+}
+
+.techs__container {
+  display: flex;
+  flex-direction: column;
+  padding: 91px 0 47px 0;
+  align-items: center;
+}
+
+.techs__heading {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+}
+
+.techs__description {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.56px;
+  max-width: 460px;
+  padding: 25px 0 0 0;
+}
+
+.techs__list {
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  padding: 102px 0 0 0;
+}
+
+.techs__list-item {
+  list-style-type: none;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.56px;
+  border-radius: 10px;
+  background: #303030;
+  width: 90px;
+  padding: 21px 0 21px 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .techs {
+    padding: 90px 50px 43px 50px;
+  }
+  .techs__container {
+    padding: 79px 0 47px 0;
+  }
+  .techs__description {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.48px;
+    padding: 23px 0 0 0;
+  }
+  .techs__list {
+    padding: 83px 0 0 0;
+  }
+  .techs__list-item {
+    width: 84px;
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .techs {
+    padding: 48px 18px 43px 18px;
+  }
+  .techs__container {
+    padding: 49px 0 47px 0;
+  }
+  .techs__title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+  .techs__heading {
+    font-size: 30px;
+    letter-spacing: -1.2px;
+  }
+  .techs__description {
+    padding: 13px 0 0 0;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -0.44px;
+  }
+  .techs__list {
+    padding: 50px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 84px));
+    grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));
+    width: 63%;
+  }
+}
