@@ -116,3 +116,15 @@
     width: 63%;
   }
 }
+
+@media screen and (max-width: 490px) {
+  .techs__list {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .techs__list {
+    width: 63%;
+  }
+}

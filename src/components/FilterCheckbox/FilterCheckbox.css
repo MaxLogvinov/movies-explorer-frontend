@@ -24,6 +24,11 @@
   transition: 0.3s;
 }
 
+.filter-checkbox__checkbox:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .filter-checkbox__checkbox::before {
   content: '';
   position: absolute;
@@ -52,6 +57,12 @@
   font-weight: 400;
   line-height: 18px;
   margin-left: 46px;
+  transition: opacity 0.3s linear;
+}
+
+.filter-checkbox__text:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .filter-checkbox__line {

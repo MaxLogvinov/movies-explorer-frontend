@@ -14,6 +14,12 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Попробовал я прогнать через w3с валидатор, через ссылку на гитхаб до папки компонетс - не получилось, показывает фигню, не знаю как адекватно достать дерево тэгов, чтобы проверить
+
+  //поисковой инпут стилизован верно, ничего для фокуса в макете нет + фокус на инпутах формы установлен по макету + в профиле сделал такой же фокус
+
+  // В app.css указан дополнительный шрифт font-family: 'Inter', Arial, sans-serif; или нужен еще один?
+
   return (
     <>
       <div className="App">

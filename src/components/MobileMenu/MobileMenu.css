@@ -83,7 +83,7 @@
   align-items: center;
   gap: 15px;
   padding-left: 50px;
-  padding: 220px 0 0 50px;
+  padding: 592px 0 0 50px;
   transition: opacity 0.3s linear;
 }
 
@@ -129,7 +129,11 @@
   .mobile-menu__link_type_checked {
     width: 74px;
   }
+
   .mobile-menu__link_type_width {
     width: 200px;
+  }
+  .mobile-menu__box {
+    padding: 420px 0 0 50px;
   }
 }

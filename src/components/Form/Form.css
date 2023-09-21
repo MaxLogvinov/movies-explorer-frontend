@@ -92,7 +92,7 @@
     padding: 16px 2px 230px 0px;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .form__header {
     width: 120px;
     padding: 39px 0px 31px 54px;

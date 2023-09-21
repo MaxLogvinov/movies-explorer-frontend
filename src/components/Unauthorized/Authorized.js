@@ -5,20 +5,20 @@ import { Link } from 'react-router-dom';
 function Unauthorized() {
   return (
     <>
-      <div className="unauthorized__links">
+      <nav className="header__unauthorized-links">
         <Link
           to="/signup"
-          className="unauthorized__link unauthorized__link_type_signup"
+          className="header__unauthorized-link header__unauthorized-link_type_signup"
         >
           Регистрация
         </Link>
         <Link
           to="/signin"
-          className="unauthorized__link unauthorized__link_type_signin"
+          className="header__unauthorized-link header__unauthorized-link_type_signin"
         >
           Войти
         </Link>
-      </div>
+      </nav>
     </>
   );
 }

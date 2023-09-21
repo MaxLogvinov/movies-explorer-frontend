@@ -1,6 +1,8 @@
 .footer {
   background: #202020;
   padding: 131px 70px 10px 70px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__title {

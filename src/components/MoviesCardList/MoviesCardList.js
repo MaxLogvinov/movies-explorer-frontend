@@ -2,9 +2,11 @@ import './MoviesCardList.css';
 
 function MoviesCardList({ children }) {
   return (
-    <section>
-      <ul className="movies-card-list">{children}</ul>
-    </section>
+    <main>
+      <section>
+        <ul className="movies-card-list">{children}</ul>
+      </section>
+    </main>
   );
 }
 

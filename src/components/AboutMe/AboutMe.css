@@ -65,6 +65,12 @@
   font-weight: 500;
   line-height: normal;
   padding: 100px 0 0 0;
+  transition: opacity 0.3s linear;
+}
+
+.about-me__link:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .about-me__photo {
@@ -116,6 +122,7 @@
   .about-me__container {
     flex-direction: column-reverse;
     padding: 60px 0 0 0;
+    align-items: center;
   }
   .about-me__heading {
     font-size: 30px;

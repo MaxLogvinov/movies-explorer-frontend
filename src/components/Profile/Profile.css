@@ -55,6 +55,19 @@
   text-align: right;
 }
 
+.profile__input:focus {
+  outline: 0;
+  border-bottom: 1px solid #4285f4;
+}
+
+.profile__input::placeholder {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .profile__error {
   min-height: 17px;
   color: #ff004c;
