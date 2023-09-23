@@ -21,7 +21,8 @@ function Profile({ setIsMobileMenuOpen }) {
                 minLength="2"
                 maxLength="30"
                 required
-                defaultValue="Виталий"
+                placeholder="Виталий"
+                // defaultValue="Виталий"
               ></input>{' '}
             </div>
             <span className="profile__error"></span>
@@ -32,7 +33,8 @@ function Profile({ setIsMobileMenuOpen }) {
                 className="profile__input"
                 type="email"
                 required
-                defaultValue="pochta@yandex.ru"
+                placeholder="pochta@yandex.ru"
+                // defaultValue="pochta@yandex.ru"
               ></input>{' '}
             </div>
             <span className="profile__error"></span>

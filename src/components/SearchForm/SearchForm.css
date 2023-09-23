@@ -33,6 +33,7 @@
 
 .search-form__input:focus {
   outline: none;
+  background-color: rgba(170, 170, 170, 0.05);
 }
 
 .search-form__button {

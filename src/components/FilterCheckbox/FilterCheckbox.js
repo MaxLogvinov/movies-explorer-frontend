@@ -3,16 +3,19 @@ import './FilterCheckbox.css';
 function FilterCheckbox() {
   return (
     <>
-      <main>
-        <section>
-          <label className="filter-checkbox">
-            <input type="checkbox" className="filter-checkbox__input"></input>
-            <span className="filter-checkbox__checkbox"></span>
-          </label>
-          <span className="filter-checkbox__text">Короткометражки</span>
-          <span className="filter-checkbox__line"></span>
-        </section>
-      </main>
+      <article>
+        <label className="search-form__filter-checkbox">
+          <input
+            type="checkbox"
+            className="search-form__filter-checkbox-input"
+          ></input>
+          <span className="search-form__filter-checkbox-checkbox"></span>
+        </label>
+        <span className="search-form__filter-checkbox-text">
+          Короткометражки
+        </span>
+        <span className="search-form__filter-checkbox-line"></span>
+      </article>
     </>
   );
 }

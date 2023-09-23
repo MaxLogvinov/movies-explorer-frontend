@@ -1,3 +1,8 @@
+.saved-movies {
+  display: flex;
+  flex-direction: column;
+}
+
 .saved-movies__empty {
   padding: 169px 0 0 0;
 }

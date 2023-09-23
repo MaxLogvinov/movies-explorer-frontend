@@ -66,13 +66,14 @@
 
 @media screen and (max-width: 767px) {
   .portfolio {
-    padding: 20px 14px 53px 14px;
+    padding: 20px 17px 53px 12px;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
   .portfolio__title {
     font-size: 14px;
+    align-self: baseline;
   }
   .portfolio__links {
     padding: 40px 0 0 0;

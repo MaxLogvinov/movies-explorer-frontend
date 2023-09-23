@@ -13,7 +13,7 @@ function Main({ isLoggedIn, setIsMobileMenuOpen }) {
   isLoggedIn = true;
   return (
     <>
-      <section className="Main">
+      <div className="main-page">
         <Header>
           {isLoggedIn ? (
             <Navigation setIsMobileMenuOpen={setIsMobileMenuOpen} />
@@ -21,7 +21,7 @@ function Main({ isLoggedIn, setIsMobileMenuOpen }) {
             <Unauthorized />
           )}
         </Header>
-        <main>
+        <main className="main">
           <Promo />
           <AboutProject />
           <Techs />
@@ -29,7 +29,7 @@ function Main({ isLoggedIn, setIsMobileMenuOpen }) {
           <Portfolio />
         </main>
         <Footer />
-      </section>
+      </div>
     </>
   );
 }

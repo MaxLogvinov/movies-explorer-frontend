@@ -10,7 +10,7 @@ import Navigation from '../Navigation/Navigation';
 function Movies({ setIsMobileMenuOpen }) {
   return (
     <>
-      <section className="movies">
+      <div className="movies">
         <Header>
           <Navigation setIsMobileMenuOpen={setIsMobileMenuOpen} />
         </Header>
@@ -33,7 +33,7 @@ function Movies({ setIsMobileMenuOpen }) {
           <MoviesButton />
         </main>
         <Footer />
-      </section>
+      </div>
     </>
   );
 }

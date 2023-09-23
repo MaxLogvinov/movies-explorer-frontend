@@ -1,8 +1,6 @@
 .footer {
   background: #202020;
-  padding: 131px 70px 10px 70px;
-  display: flex;
-  flex-direction: column;
+  padding: 133px 70px 10px 70px;
 }
 
 .footer__title {
@@ -70,7 +68,7 @@
 
 @media screen and (max-width: 767px) {
   .footer {
-    padding: 53px 10px 10px 10px;
+    padding: 53px 14px 10px 14px;
   }
   .footer__title {
     font-size: 12px;

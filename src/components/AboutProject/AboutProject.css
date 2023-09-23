@@ -148,25 +148,6 @@
   .about-project__container {
     flex-direction: column;
     align-items: center;
-    width: 284px;
-    min-width: 484px;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .about-project__container {
-    min-width: 384px;
-  }
-}
-
-@media screen and (max-width: 422px) {
-  .about-project__container {
-    min-width: 342px;
-  }
-}
-
-@media screen and (max-width: 372px) {
-  .about-project__container {
-    min-width: 284px;
+    min-width: 80%;
   }
 }

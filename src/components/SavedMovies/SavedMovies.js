@@ -9,7 +9,7 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 function SavedMovies({ setIsMobileMenuOpen }) {
   return (
     <>
-      <section className="saved-movies">
+      <div className="saved-movies">
         <Header>
           <Navigation setIsMobileMenuOpen={setIsMobileMenuOpen} />
         </Header>
@@ -23,7 +23,7 @@ function SavedMovies({ setIsMobileMenuOpen }) {
           <div className="saved-movies__empty"></div>
         </main>
         <Footer />
-      </section>
+      </div>
     </>
   );
 }

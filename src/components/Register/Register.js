@@ -12,33 +12,33 @@ function Register() {
         link="/signin"
         linkText="Войти"
       >
-        <label className="register__label">Имя</label>
+        <label className="form__label">Имя</label>
         <input
-          className="register__input"
+          className="form__input"
           type="text"
           minLength="2"
           maxLength="30"
           required
           placeholder="Введите имя"
         />
-        <span className="register__error"></span>
-        <label className="register__label">E-mail</label>
+        <span className="form__error"></span>
+        <label className="form__label">E-mail</label>
         <input
-          className="register__input"
+          className="form__input"
           type="email"
           placeholder="Введите email"
         />
-        <span className="register__error"></span>
-        <label className="register__label">Пароль</label>
+        <span className="form__error"></span>
+        <label className="form__label">Пароль</label>
         <input
-          className="register__input"
+          className="form__input"
           type="password"
           required
           minLength="2"
           maxLength="40"
           placeholder="Введите пароль"
         />
-        <span className="register__error"></span>
+        <span className="form__error"></span>
       </Form>
     </main>
   );

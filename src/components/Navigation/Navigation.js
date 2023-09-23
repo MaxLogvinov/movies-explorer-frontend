@@ -5,13 +5,13 @@ import { Link, NavLink } from 'react-router-dom';
 function Navigation({ setIsMobileMenuOpen }) {
   return (
     <>
-      <section className="header-navigation">
-        <nav className="header-navigation__links">
+      <div className="header__navigation">
+        <nav className="header__navigation-links">
           <NavLink
             to="/movies"
             className={({ isActive }) =>
-              `header-navigation__link ${
-                isActive ? 'header-navigation__link_type_checked' : ''
+              `header__navigation-link ${
+                isActive ? 'header__navigation-link_type_checked' : ''
               }`
             }
           >
@@ -20,22 +20,22 @@ function Navigation({ setIsMobileMenuOpen }) {
           <NavLink
             to="/saved-movies"
             className={({ isActive }) =>
-              `header-navigation__link ${
-                isActive ? 'header-navigation__link_type_checked' : ''
+              `header__navigation-link ${
+                isActive ? 'header__navigation-link_type_checked' : ''
               }`
             }
           >
             Сохранённые фильмы
           </NavLink>
-          <Link to="/profile" className="header-navigation__container ">
-            <p className="header-navigation__account">Аккаунт</p>
-            <span className="header-navigation__icon"></span>
+          <Link to="/profile" className="header__navigation-container ">
+            <p className="header__navigation-account">Аккаунт</p>
+            <span className="header__navigation-icon"></span>
           </Link>
         </nav>
-      </section>
+      </div>
       <button
         type="button"
-        className="header-navigation__button"
+        className="header__navigation-button"
         onClick={() => setIsMobileMenuOpen(true)}
       ></button>
     </>

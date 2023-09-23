@@ -12,26 +12,26 @@ function Login() {
         link="/signup"
         linkText="Регистрация"
       >
-        <label className="register__label">E-mail</label>
+        <label className="form__label">E-mail</label>
         <input
-          className="register__input"
+          className="form__input"
           type="email"
           placeholder="Введите email"
           minLength="2"
           maxLength="30"
           required
         />
-        <span className="register__error"></span>
-        <label className="register__label">Пароль</label>
+        <span className="form__error"></span>
+        <label className="form__label">Пароль</label>
         <input
-          className="register__input"
+          className="form__input"
           type="password"
           required
           placeholder="Введите пароль"
           minLength="2"
           maxLength="40"
         />
-        <span className="register__error"></span>
+        <span className="form__error"></span>
       </Form>
     </main>
   );
