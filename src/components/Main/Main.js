@@ -10,7 +10,6 @@ import Unauthorized from '../Unauthorized/Authorized';
 import Navigation from '../Navigation/Navigation';
 
 function Main({ isLoggedIn, setIsMobileMenuOpen }) {
-  isLoggedIn = true;
   return (
     <>
       <div className="main-page">

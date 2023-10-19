@@ -1,6 +1,6 @@
 import './FilterCheckbox.css';
 
-function FilterCheckbox() {
+function FilterCheckbox({ onChangeCheckBox, isShort }) {
   return (
     <>
       <article>
@@ -8,6 +8,8 @@ function FilterCheckbox() {
           <input
             type="checkbox"
             className="search-form__filter-checkbox-input"
+            checked={isShort}
+            onChange={onChangeCheckBox}
           ></input>
           <span className="search-form__filter-checkbox-checkbox"></span>
         </label>

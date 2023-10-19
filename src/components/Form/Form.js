@@ -2,21 +2,48 @@ import Header from '../Header/Header';
 import './Form.css';
 import { Link, useLocation } from 'react-router-dom';
 
-function Form({ children, title, name, buttonText, formText, link, linkText }) {
+function Form({
+  children,
+  title,
+  name,
+  onSubmit,
+  buttonText,
+  formText,
+  link,
+  linkText,
+  isValid,
+}) {
   const location = useLocation();
+
   return (
     <section className="form">
       <div className="form__header">
         <Header />
       </div>
-      <form className="form__container" name={name}>
+      <form
+        className="form__container"
+        name={name}
+        noValidate
+        onSubmit={onSubmit}
+      >
         <h1 className="form__title">{title}</h1>
         {children}
         <button
           type="submit"
-          className={`form__button ${
-            location.pathname === '/signin' ? 'form__button_type_login' : ''
-          }`}
+          className={
+            isValid
+              ? `form__button ${
+                  location.pathname === '/signin'
+                    ? 'form__button_type_login'
+                    : ''
+                } `
+              : `form__button ${
+                  location.pathname === '/signin'
+                    ? 'form__button_type_login'
+                    : ''
+                } form__button_disabled`
+          }
+          disabled={!isValid}
         >
           {buttonText}
         </button>
