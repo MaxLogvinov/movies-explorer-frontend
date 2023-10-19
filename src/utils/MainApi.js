@@ -1,4 +1,4 @@
-const MAIN_API_URL = 'http://localhost:4000/';
+const MAIN_API_URL = 'http://api.diploma.maxlogvinov.nomoredomainsicu.ru/';
 class Api {
   constructor({ url, headers }) {
     this._url = url;
