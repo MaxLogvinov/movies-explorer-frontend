@@ -41,13 +41,7 @@ function App() {
     api
       .register(name, email, password)
       .then((res) => {
-        api.checkToken().then((res) => setCurrentUser(res));
-        api.getSavedMovies().then((res) => {
-          setUserMovies(res);
-        });
-        setIsLoggedIn(true);
-
-        navigate('/movies', { replace: true });
+        handleLogin(email, password);
       })
       .catch((err) => {
         console.log(err);
@@ -78,6 +72,7 @@ function App() {
       .catch((err) => {
         console.log(err);
         setIsLoggedIn(false);
+        setCurrentUser({});
         setIsPopupErrorOpen(true);
         setPopupErrorMessage('Ошибка входа: неверный логин и/или пароль');
       })
