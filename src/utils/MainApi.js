@@ -1,4 +1,4 @@
-const MAIN_API_URL = 'http://api.diploma.maxlogvinov.nomoredomainsicu.ru/';
+const MAIN_API_URL = 'https://api.diploma.maxlogvinov.nomoredomainsicu.ru/';
 
 // const MAIN_API_URL = 'http://localhost:4001/';
 class Api {
