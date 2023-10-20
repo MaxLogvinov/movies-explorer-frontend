@@ -7,3 +7,5 @@
 https://github.com/MaxLogvinov/movies-explorer-frontend/pull/3
 
 # Deploy
+
+https://diploma.maxlogvinov.nomoredomainsicu.ru/
