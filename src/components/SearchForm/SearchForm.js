@@ -15,11 +15,13 @@ function SearchForm({
   const location = useLocation();
   const savedMoviesPath = location.pathname === '/saved-movies';
 
-  const localStorageSavedInputValue = ' ';
+  // const localStorageSavedInputValue = ' ';
+  // savedMoviesPath
+  //   ? localStorageSavedInputValue || ''
+  //   :
 
-  const localStorageSearchInputValue = savedMoviesPath
-    ? localStorageSavedInputValue || ''
-    : JSON.parse(localStorage.getItem('searchInputValue')) || '';
+  const localStorageSearchInputValue =
+    JSON.parse(localStorage.getItem('searchInputValue')) || '';
 
   const localStorageIsShort = savedMoviesPath
     ? false
@@ -33,6 +35,8 @@ function SearchForm({
     localStorageSearchInputValue
   );
 
+  const [savedInputValue, setSavedInputValue] = useState('');
+
   function onChangeCheckBox(e) {
     setIsShort(e.target.checked);
     localStorage.setItem('isShort', e.target.checked);
@@ -41,7 +45,7 @@ function SearchForm({
 
   function handleChange(e) {
     if (savedMoviesPath) {
-      setSearchInputValue(e.target.value);
+      setSavedInputValue(e.target.value);
     } else {
       setSearchInputValue(e.target.value);
     }
@@ -52,9 +56,8 @@ function SearchForm({
     setIsSearchSumbit(true);
     if (searchInputValue.length > 0) {
       if (savedMoviesPath) {
-        onSubmit(localStorageSavedInputValue, isShort, isSearchSumbit);
+        onSubmit(savedInputValue, isShort, isSearchSumbit);
       } else {
-        setIsSearchSumbit(true);
         onSubmit(searchInputValue, isShort, isSearchSumbit);
       }
     } else {
@@ -66,7 +69,7 @@ function SearchForm({
   useEffect(() => {
     if (isSearchSumbit === true) {
       if (savedMoviesPath) {
-        onSubmit(localStorageSavedInputValue, isShort, isSearchSumbit);
+        onSubmit(savedInputValue, isShort, isSearchSumbit);
       } else {
         onSubmit(searchInputValue, isShort, isSearchSumbit);
       }
@@ -75,7 +78,7 @@ function SearchForm({
 
   useEffect(() => {
     if (isChangeUserMovies) {
-      onSubmit(searchInputValue, isShort, isSearchSumbit);
+      onSubmit(savedInputValue, isShort, isSearchSumbit);
     } //eslint-disable-next-line
   }, [isShort, isChangeUserMovies, userMovies]);
 
@@ -89,7 +92,10 @@ function SearchForm({
             required
             className="search-form__input"
             onChange={handleChange}
-            value={searchInputValue || ''}
+            // {savedMoviesPath ? value={searchInputValue || ''} : value={savedInputValue || ''}}
+            value={
+              savedMoviesPath ? savedInputValue || '' : searchInputValue || ''
+            }
           ></input>
           <button type="submit" className="search-form__button">
             Поиск
