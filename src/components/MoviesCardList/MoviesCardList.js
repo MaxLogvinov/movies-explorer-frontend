@@ -10,6 +10,8 @@ function MoviesCardList({
   handleDeleteMovieFromSaved,
   savedMovies,
   userMovies,
+  isSearchSumbit,
+  setIsSearchSumbit,
 }) {
   const location = useLocation();
   const moviesPath = location.pathname === '/movies';
@@ -46,17 +48,37 @@ function MoviesCardList({
     [isClick, setVisibleMovies, visibleMovies]
   );
 
+  const issuingAfterSubmit = useCallback(
+    (clientWidth) => {
+      if (isSearchSumbit === true) {
+        if (clientWidth > 1238) {
+          setVisibleMovies(12);
+        }
+
+        if (clientWidth <= 1238) {
+          setVisibleMovies(8);
+        }
+        if (clientWidth <= 718) {
+          setVisibleMovies(5);
+        }
+        setIsSearchSumbit(false);
+      }
+    }, //eslint-disable-next-line
+    [isSearchSumbit]
+  );
+
   useEffect(() => {
     const resizeObserver = new ResizeObserver(([{ target }]) => {
       const { clientWidth } = target;
       widthTraking(clientWidth);
       setWidth(clientWidth);
+      issuingAfterSubmit(clientWidth);
     });
 
     if (ref.current) {
       resizeObserver.observe(ref.current);
     }
-  }, [isClick, ref, widthTraking]);
+  }, [isClick, ref, widthTraking, issuingAfterSubmit]);
 
   function handleAddCards() {
     setIsClick(!isClick);

@@ -9,19 +9,18 @@ function SearchForm({
   setPopupErrorMessage,
   isChangeUserMovies,
   userMovies,
+  setIsSearchSumbit,
+  isSearchSumbit,
 }) {
   const location = useLocation();
   const savedMoviesPath = location.pathname === '/saved-movies';
 
-  const localStorageSavedInputValue =
-    localStorage.getItem('savedInputValue') || '';
+  const localStorageSavedInputValue = ' ';
 
   const localStorageSearchInputValue = savedMoviesPath
     ? localStorageSavedInputValue || ''
     : JSON.parse(localStorage.getItem('searchInputValue')) || '';
-  const localStorageSearchSubmit = savedMoviesPath
-    ? false
-    : JSON.parse(localStorage.getItem('searchSumbit'));
+
   const localStorageIsShort = savedMoviesPath
     ? false
     : localStorage.getItem('isShort') === 'false' ||
@@ -33,18 +32,15 @@ function SearchForm({
   const [searchInputValue, setSearchInputValue] = useState(
     localStorageSearchInputValue
   );
-  const [isSearchSumbit, setIsSearchSumbit] = useState(
-    localStorageSearchSubmit
-  );
 
   function onChangeCheckBox(e) {
     setIsShort(e.target.checked);
     localStorage.setItem('isShort', e.target.checked);
+    setIsSearchSumbit(true);
   }
 
   function handleChange(e) {
     if (savedMoviesPath) {
-      localStorage.setItem('savedInputValue', e.target.value);
       setSearchInputValue(e.target.value);
     } else {
       setSearchInputValue(e.target.value);
@@ -58,6 +54,7 @@ function SearchForm({
       if (savedMoviesPath) {
         onSubmit(localStorageSavedInputValue, isShort, isSearchSumbit);
       } else {
+        setIsSearchSumbit(true);
         onSubmit(searchInputValue, isShort, isSearchSumbit);
       }
     } else {

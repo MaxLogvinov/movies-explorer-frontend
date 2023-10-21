@@ -12,6 +12,7 @@ function Form({
   link,
   linkText,
   isValid,
+  isLoading,
 }) {
   const location = useLocation();
 
@@ -31,7 +32,7 @@ function Form({
         <button
           type="submit"
           className={
-            isValid
+            isValid && !isLoading
               ? `form__button ${
                   location.pathname === '/signin'
                     ? 'form__button_type_login'
@@ -43,7 +44,7 @@ function Form({
                     : ''
                 } form__button_disabled`
           }
-          disabled={!isValid}
+          disabled={!isValid || isLoading}
         >
           {buttonText}
         </button>

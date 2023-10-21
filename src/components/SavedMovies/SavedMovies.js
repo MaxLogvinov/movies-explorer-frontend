@@ -18,11 +18,13 @@ function SavedMovies({
 }) {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [errorMessage, setErrorMessage] = useState(false);
+  const [isSearchSumbit, setIsSearchSumbit] = useState(false);
 
   function handleSearchSavedResults(searchInputValue, isShort) {
     setErrorMessage(false);
     const filteredMovies = handleFilter(userMovies, searchInputValue, isShort);
     setFilteredMovies(filteredMovies);
+    setIsSearchSumbit(false);
     if (filteredMovies.length === 0) {
       setErrorMessage('Ничего не найдено');
     }
@@ -47,6 +49,8 @@ function SavedMovies({
             setPopupErrorMessage={setPopupErrorMessage}
             isChangeUserMovies={isChangeUserMovies}
             userMovies={userMovies}
+            setIsSearchSumbit={setIsSearchSumbit}
+            isSearchSumbit={isSearchSumbit}
           />
           {errorMessage ? (
             <div className="movies__error">Ничего не найдено</div>

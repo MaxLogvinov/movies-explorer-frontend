@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
 import { useState, useCallback, useEffect } from 'react';
 import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
@@ -219,9 +219,24 @@ function App() {
               />
               <Route
                 path="/signup"
-                element={<Register onRegister={handleRegister} />}
+                element={
+                  isLoggedIn ? (
+                    <Navigate to="/movies" replace />
+                  ) : (
+                    <Register onRegister={handleRegister} />
+                  )
+                }
               />
-              <Route path="/signin" element={<Login onLogin={handleLogin} />} />
+              <Route
+                path="/signin"
+                element={
+                  isLoggedIn ? (
+                    <Navigate to="/movies" replace />
+                  ) : (
+                    <Login onLogin={handleLogin} isLoading />
+                  )
+                }
+              />
               <Route
                 path="/movies"
                 element={
@@ -256,7 +271,6 @@ function App() {
                   />
                 }
               />
-
               <Route
                 path="/profile"
                 element={

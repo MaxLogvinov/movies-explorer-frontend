@@ -7,6 +7,7 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Navigation from '../Navigation/Navigation';
 import Preloader from '../Preloader/Preloader';
 import moviesApi from '../../utils/MoviesApi';
+import { useLocation } from 'react-router-dom';
 
 function Movies({
   setIsMobileMenuOpen,
@@ -19,8 +20,18 @@ function Movies({
   handleDeleteMovieFromSaved,
   userMovies,
 }) {
+  const location = useLocation();
+  const savedMoviesPath = location.pathname === '/saved-movies';
+
   const localStorageSearchMovies =
     JSON.parse(localStorage.getItem('selectedFilms')) || [];
+  const localStorageSearchSubmit = savedMoviesPath
+    ? false
+    : JSON.parse(localStorage.getItem('searchSumbit'));
+
+  const [isSearchSumbit, setIsSearchSumbit] = useState(
+    localStorageSearchSubmit
+  );
 
   const [selectedFilms, setSelectedFilms] = useState(localStorageSearchMovies);
   const [errorMessage, setErrorMessage] = useState(false);
@@ -73,6 +84,8 @@ function Movies({
             onSubmit={handleSearchResults}
             setIsPopupErrorOpen={setIsPopupErrorOpen}
             setPopupErrorMessage={setPopupErrorMessage}
+            setIsSearchSumbit={setIsSearchSumbit}
+            isSearchSumbit={isSearchSumbit}
           />
           {isLoading ? (
             <Preloader />
@@ -84,6 +97,8 @@ function Movies({
               handleAddMovieToSaved={handleAddMovieToSaved}
               handleDeleteMovieFromSaved={handleDeleteMovieFromSaved}
               userMovies={userMovies}
+              setIsSearchSumbit={setIsSearchSumbit}
+              isSearchSumbit={isSearchSumbit}
             />
           )}
         </main>
