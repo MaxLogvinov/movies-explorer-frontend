@@ -35,6 +35,11 @@
   line-height: normal;
   margin: 184px 0 60px 0;
   transition: opacity 0.3s linear;
+  border: none;
+  padding: 0;
+  width: max-content;
+  align-self: center;
+  background: none;
 }
 
 .not-found__button:hover {
