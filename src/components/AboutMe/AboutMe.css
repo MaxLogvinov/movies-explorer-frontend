@@ -76,6 +76,7 @@
 .about-me__photo {
   width: 270px;
   height: 327px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1023px) {
