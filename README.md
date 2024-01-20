@@ -4,9 +4,14 @@
 
 **Технологический стек**
 
-HTML5, Flexbox, Grid layout, CSS3, React.js, React Router, JSX
+- HTML5;
+- CSS3;
+- Flexbox;
+- Grid layout;
+- React.js;
+- React Router;
 
-**Описание примененных методов**
+**Использованные методы**
 
 - Адаптивная верстка. Верстка мобильной версии с использованием "бургерного" меню.
 - В качестве инфраструктуры проекта используется CRA.
@@ -25,5 +30,6 @@ HTML5, Flexbox, Grid layout, CSS3, React.js, React Router, JSX
 - В проекте реализована регистрация, аутентификация и авторизация.
 - Валидация вводим в формы данных в реальном времени.
 
-**Деплой проекта на сервере**
-(https://diploma.maxlogvinov.nomoredomainsicu.ru)
+**[Деплой проекта на сервере](https://diploma.maxlogvinov.nomoredomainsicu.ru)**
+
+Проект завершен.
